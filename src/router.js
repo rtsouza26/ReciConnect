@@ -5,6 +5,7 @@ import Login from "./views/Login.vue"
 import left from "./components/Leftsidebar.vue"
 import topbar from "./components/TopBar.vue"
 
+
 Vue.use(Router);
 
 export default new Router({
@@ -14,18 +15,11 @@ export default new Router({
       {
         path: "/",
         name: "home",
-        component: Home,
-          children:[{
-            path:"logado",
-            component:left}
-
-            
-            
-            
-          ]
-         
+        component:
+          Home
         
-    },
+          
+      },
     {
       path:"/login",
       name:"login",

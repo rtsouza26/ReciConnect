@@ -7,28 +7,16 @@
         <div class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <ul class="nav navbar-nav list-inline navbar-left">
-                    <li class="list-inline-item">
+                    <li class="nav-item mx2">
                                 <button class="button-menu-mobile open-left">
                                     <i>teste</i>
                                 </button>
                             </li>
-                    <li class="list-inline-item">
-                         <router-link to="/login" class="page-title">Login</router-link>
-                        
-                    </li>
-                    
-                        
-                    
+                    <li class="nav-item mx-2">
+                            
+                    </li>   
                 </ul>
-                <nav class="navbar-custom">
-                    <ul class="list-unstyled topbar-right-menu float-right mb-0">
-                        <li>
-                        </li>
-                    </ul>
-                
-
-
-                </nav>
+               
             </div>
         </div>
     </div>

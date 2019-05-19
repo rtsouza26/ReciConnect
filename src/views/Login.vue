@@ -10,7 +10,7 @@
                     <h4 class="text-uppercase font-bold m-b-0">Sign In</h4>
                 </div>
                 <div class="p-20">
-                    <form class="form-horizontal m-t-20">
+                    <form class="form-horizontal m-t-20" >
 
                         <div class="form-group">
                             <div class="col-xs-12">
@@ -61,6 +61,8 @@
 </template>
 
 <script>
+
+
 export default {
     name: "login",
     data(){

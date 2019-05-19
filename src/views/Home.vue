@@ -1,24 +1,33 @@
 <template>
   <div>
     <Topbar></Topbar>
-    <router-view></router-view>
+    
+    <Left logado></Left>
+    <div class="content-page">
+      <div class="content">
+        <div class="container-fluid">
+        <Register></Register>
+        </div>
+      </div>
+    </div>
+        
   </div>
 
 </template>
 
 <script>
 // @ is an alias to /src
-
+import Topbar from "@/components/TopBar.vue";
 import Left from "@/components/Leftsidebar.vue";
-import Topbar from "@/components/TopBar.vue"
-
+import Register from "@/components/Register.vue"
 
 
 export default {
   name: "home",
   components:{
     Topbar,
-    Left
+    Left,
+    Register
   }
-};
+}
 </script>
