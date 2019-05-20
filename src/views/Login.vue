@@ -14,13 +14,13 @@
 
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" placeholder="Username">
+                                <input class="form-control" type="text" required="" v-model="auth.login" placeholder="Email">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control" type="password" required="" placeholder="Password">
+                                <input class="form-control" type="password" required="" v-model="auth.senha" placeholder="Senha">
                             </div>
                         </div>
 
@@ -41,7 +41,7 @@
 
                         <div class="form-group m-t-30 m-b-0">
                             <div class="col-sm-12">
-                                <a href="#" class="text-muted"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
+                                <a href="#" class="text-muted"><i class="fa fa-lock m-r-5"></i> Esqueceu sua Senha?</a>
                             </div>
                         </div>
                     </form>
@@ -52,7 +52,7 @@
 
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p class="text-muted">Don't have an account? <a href="page-register.html" class="text-primary m-l-5"><b>Sign Up</b></a></p>
+                    <p class="text-muted">Não tem uma Conta? <router-link to="/registro" class="text-primary m-l-5"><b>Registre-se</b></router-link></p>
                 </div>
             </div>
             
@@ -67,9 +67,12 @@ export default {
     name: "login",
     data(){
         return{
-            login: null,
-            senha: null,
-            logado:String
+            auth:{
+                login: null,
+                senha: null,
+                logado:String,
+                remenbeme:false
+                }
         }
     },
     methods:{

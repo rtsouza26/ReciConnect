@@ -1,33 +1,37 @@
 <template>
   <div>
-    <Topbar></Topbar>
-    
-    <Left logado></Left>
+    <TopBar></TopBar>
+    <Leftsidebar logado></Leftsidebar>
     <div class="content-page">
       <div class="content">
         <div class="container-fluid">
-        <Register></Register>
+          <router-view></router-view>
+          <Footer></Footer>
         </div>
       </div>
-    </div>
-        
+    </div> 
   </div>
 
 </template>
 
 <script>
 // @ is an alias to /src
-import Topbar from "@/components/TopBar.vue";
-import Left from "@/components/Leftsidebar.vue";
-import Register from "@/components/Register.vue"
+import TopBar from "@/components/TopBar.vue";
+import Leftsidebar from "@/components/Leftsidebar.vue";
+import Footer from "@/components/Footer.vue"
 
 
 export default {
   name: "home",
   components:{
-    Topbar,
-    Left,
-    Register
+    TopBar,
+    Leftsidebar,
+    Footer
+  },
+  data(){
+    return{
+      logado:Boolean
+    }
   }
 }
 </script>

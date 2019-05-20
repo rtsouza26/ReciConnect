@@ -1,5 +1,7 @@
 <template>
-    
+    <footer class="footer text-left">
+        rodapé rodapé rodapé
+    </footer>
 </template>
 
 <script>

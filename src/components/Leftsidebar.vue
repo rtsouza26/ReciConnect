@@ -2,7 +2,7 @@
 
 <div class = "left side-menu">
     <div  class = "sidebar-inner slimscrollleft" >
-        <div v-if="this.logado" class = "user-box" >
+        <div v-show="this.logado" class = "user-box" >
             <div class = "user-img">
                 <img src="/assets/image/man.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
             </div>
@@ -14,9 +14,9 @@
             <ul>
                 <li class="text-muted menu-title">Navigation</li>
                 <li>
-                    <router-link to="/login"><a href="#" class="waves-effect"><span>Login</span></a></router-link></li> 
+                    <router-link to="/login" class="waves-effect"><span>Login</span></router-link></li> 
                 <li>
-                    <a href="#" class="waves-effect"><span> Typography </span> </a></li>
+                    <router-link to="/cadastro" class="waves-effect"><span>Cadastro</span></router-link></li>
                 <li class="has_sub">
                     <a href="#" class="waves-effect"><span> User Interface </span> </a></li>
                 <li class="has_sub">
