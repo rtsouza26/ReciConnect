@@ -2,21 +2,38 @@
 
     <div class="topbar">
        <div class="topbar-left">
-            <router-link to= "/"><a href="index.html" class="logo"><span>Reci<span>Connect</span></span></a></router-link>
+            <router-link to= "/" class="logo"><span>Reci<span>Connect</span></span><i class="mdi mdi-recycle mdi-36px"></i></router-link>
         </div> 
         <div class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <ul class="nav navbar-nav list-inline navbar-left">
-                    <li class="nav-item mx2">
-                                <button class="button-menu-mobile open-left">
-                                    <i>teste</i>
-                                </button>
-                            </li>
-                    <li class="nav-item mx-2">
-                            
-                    </li>   
+                    <li class="list-inline-item"> 
+                    </li>  
                 </ul>
-               
+                <nav class="navbar-custom">
+                    <ul class="list-unstyled topbar-right-menu float-right mb-0">
+                        <li class="hide-phone p-2">
+                            <router-link to="/"><h4 class="page-title">Home </h4></router-link>  
+                        </li>
+                        <li class="hide-phone p-2">
+                            <h4 class="page-title">Sobre</h4>  
+                        </li>
+                        <li class="hide-phone p-2">
+                            <h4 class="page-title">Login</h4>  
+                        </li>
+                        <li class="hide-phone p-2">
+                            <h4 class="page-title">Chat</h4>  
+                        </li>
+                        <li class="hide-phone">
+                            <form class="app-search">
+                                <input type="text" placeholder="Search..."
+                                    class="form-control">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </li>
+                        
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>

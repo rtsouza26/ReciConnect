@@ -2,7 +2,8 @@
 
 <div class = "left side-menu">
     <div  class = "sidebar-inner slimscrollleft" >
-        <div v-show="this.logado" class = "user-box" >
+    
+        <div v-show= "this.logado.login" class = "user-box" >
             <div class = "user-img">
                 <img src="/assets/image/man.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
             </div>
@@ -12,30 +13,20 @@
     
         <div id="sidebar-menu">
             <ul>
-                <li class="text-muted menu-title">Navigation</li>
+                <li class="text-muted menu-title">Navegação</li>
                 <li>
-                    <router-link to="/login" class="waves-effect"><span>Login</span></router-link></li> 
+                    <router-link to="/login" class="waves-effect"><i class="mdi mdi-account mdi-24px"></i><span>Login</span></router-link></li> 
                 <li>
-                    <router-link to="/cadastro" class="waves-effect"><span>Cadastro</span></router-link></li>
+                    <router-link to="/mapa" class="waves-effect green"><i class="mdi mdi-map mdi-24px"></i><span>Mapa</span></router-link></li>
                 <li class="has_sub">
-                    <a href="#" class="waves-effect"><span> User Interface </span> </a></li>
+                    <router-link to="/sobre" class="waves-effect"><i class="mdi mdi-recycle mdi-24px"></i><span>Sobre</span> </router-link></li>
                 <li class="has_sub">
-                    <a href="#" class="waves-effect"><span> Forms </span> </a></li>
+                    <router-link to="/tips" class="waves-effect"><i class ="mdi mdi-creation mdi-24px"></i><span> Dicas </span> </router-link></li>
                 <li class="has_sub">
-                    <a href="#" class="waves-effect"> <span> Tables </span> </a></li>
+                    <router-link to="/chat" class="waves-effect"><i class ="mdi mdi-wechat mdi-24px"></i><span> Chat </span> </router-link></li>
                 <li class="has_sub">
-                <a href="#" class="waves-effect"><span> Charts </span></a>
-                </li>
-                <li>
-                <a href="#" class="waves-effect"><span> Calendar </span></a>
-                </li>
-                <li class="has_sub">
-                <a href="#" class="waves-effect"><span> Pages </span> </a>
-                </li>
-                <li class="has_sub">
-                <a href="#" class="waves-effect"><span>Extra Pages </span> </a>
-                </li>
-
+                    <router-link to="/rank" class="waves-effect"><i class ="mdi mdi-trophy mdi-24px"></i><span> Ranking</span> </router-link></li>   
+                    
             </ul>
         </div>
     
@@ -48,7 +39,10 @@
 export default {
     name: "Leftsidebar",
     props:{
-        logado : Boolean
+        logado :{
+            login:Boolean,
+            
+        }
     }
 
 }

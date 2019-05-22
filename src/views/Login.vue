@@ -52,7 +52,7 @@
 
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <p class="text-muted">Não tem uma Conta? <router-link to="/registro" class="text-primary m-l-5"><b>Registre-se</b></router-link></p>
+                    <p class="text-muted">Não tem uma Conta? <router-link to="/cadastro" class="text-primary m-l-5"><b>Registre-se</b></router-link></p>
                 </div>
             </div>
             

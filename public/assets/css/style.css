@@ -1203,7 +1203,7 @@ pre {
   margin-top: -10px;
   margin-left: -10px;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(144,238,144, 0.2);
   -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
   -webkit-transition-property: -webkit-transform, opacity;
@@ -1257,7 +1257,7 @@ pre {
 }
 
 .waves-effect.waves-primary .waves-ripple {
-  background-color: rgba(24, 138, 226, 0.4);
+  background-color: rgba(144,238,144, 0.4);
 }
 
 .waves-effect.waves-success .waves-ripple {

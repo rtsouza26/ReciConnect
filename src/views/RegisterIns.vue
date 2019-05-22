@@ -4,21 +4,41 @@
         <div class="card-box">
             <div clas="row">
                 <div class = "col-12">
-                    <h1 class="display-4">{{ titulo }}</h1> 
+                    <h1 class="display-4">Cadastro de Instituição</h1> 
                     <form  data-parsley-validate novalidate >
                         <div class="form-group">
-                            <label for="userName">Nome*</label>
-                            <input  type="text" name="nome" v-model= "usuario.nome"  parsley-trigger="change" required
+                            <label for="userName">Nome da Intituição*</label>
+                            <input  type="text" name="nome"   parsley-trigger="change" required
                                 placeholder="Entre com o seu nome" class="form-control" id="userName" >
                         </div>
                         <div class="form-group">
                             <label for="emailAddress">Email*</label>
-                            <input type="email" name="email"  v-model = "usuario.email" parsley-trigger="change" required
+                            <input type="email" name="email"   parsley-trigger="change" required
+                                placeholder="Entre com seu Email" class="form-control" id="emailAddress">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddress">CNPJ*</label>
+                            <input type="email" name="email"   parsley-trigger="change" required
+                                placeholder="Entre com seu Email" class="form-control" id="emailAddress">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddress">Endereço*</label>
+                            <input type="email" name="email"   parsley-trigger="change" required
+                                placeholder="Entre com seu Email" class="form-control" id="emailAddress">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddress">Telefone</label>
+                            <input type="email" name="email"   parsley-trigger="change" required
+                                placeholder="Entre com seu Email" class="form-control" id="emailAddress">
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddress">Email*</label>
+                            <input type="email" name="email"   parsley-trigger="change" required
                                 placeholder="Entre com seu Email" class="form-control" id="emailAddress">
                         </div>
                         <div class="form-group">
                             <label for="pass1">Senha*</label>
-                            <input id="pass1" type="password"  v-model= "usuario.password" placeholder="Password" required
+                            <input id="pass1" type="password"   placeholder="Password" required
                                 class="form-control">
                         </div>
                         <div class="form-group">
@@ -28,27 +48,27 @@
                         </div>
                             <div class="form-check">
                                 <h3 class="header-title m-t-0 m-b-30">Escolha um Avatar</h3>
-                                <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                                <input class="form-check-input" type="radio"  name="inlineRadioOptions" id="inlineRadio1" value="1">
                                 <label class="form-check-label" for="inlineRadio1">
                                     <img src="/assets/image/avatares/man.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
                                 </label>
-                                 <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                                 <input class="form-check-input" type="radio"  name="inlineRadioOptions" id="inlineRadio2" value="2">
                                 <label class="form-check-label" for="inlineRadio2">
                                     <img src="/assets/image/avatares/man2.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
                                 </label>
-                                 <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                                 <input class="form-check-input" type="radio"  name="inlineRadioOptions" id="inlineRadio3" value="3">
                                 <label class="form-check-label" for="inlineRadio3">
                                     <img src="/assets/image/avatares/man3.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
                                 </label>
-                                 <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="inlineRadioOptions" id="inlineRadio4" value="4">
+                                 <input class="form-check-input" type="radio"  name="inlineRadioOptions" id="inlineRadio4" value="4">
                                 <label class="form-check-label" for="inlineRadio4">
                                     <img src="/assets/image/avatares/woman5.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
                                 </label>
-                                <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="inlineRadioOptions" id="inlineRadio5" value="5">
+                                <input class="form-check-input" type="radio"  name="inlineRadioOptions" id="inlineRadio5" value="5">
                                 <label class="form-check-label" for="inlineRadio5">
                                     <img src="/assets/image/avatares/woman2.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
                                 </label>
-                                <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="inlineRadioOptions" id="inlineRadio6" value="6">
+                                <input class="form-check-input" type="radio"  name="inlineRadioOptions" id="inlineRadio6" value="6">
                                 <label class="form-check-label" for="inlineRadio6">
                                     <img src="/assets/image/avatares/woman3.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
                                 </label>
@@ -68,22 +88,24 @@
         </div>
     </div>
 </div>
-   
 </template>
 
 <script>
 export default {
-    name: "Register",
+    name: "RegisterIns",
     props:{
-        titulo:String
+        titulo:null
     },
     data(){
         return{
-            usuario:{
-                nome:null,
-                email:null,
-                pasword:null,
-                avatar:0
+            intituicao:{
+                nome:String,
+                endereco:String,
+                email:String,
+                telefone:String,
+                cnpj:String,
+
+
             }
         }
     
@@ -95,7 +117,6 @@ export default {
     }
 
 }
-</script>
 
 <style>
 
