@@ -16,13 +16,16 @@
                             <router-link to="/"><h4 class="page-title">Home </h4></router-link>  
                         </li>
                         <li class="hide-phone p-2">
-                            <h4 class="page-title">Sobre</h4>  
+                             <router-link to="/login"><h4 class="page-title">Login </h4></router-link>
                         </li>
                         <li class="hide-phone p-2">
-                            <h4 class="page-title">Login</h4>  
+                             <router-link to="/tips"><h4 class="page-title">Dicas </h4></router-link> 
                         </li>
                         <li class="hide-phone p-2">
-                            <h4 class="page-title">Chat</h4>  
+                             <router-link to="/chat"><h4 class="page-title">Chat </h4></router-link>
+                        </li>
+                        <li class="hide-phone p-2">
+                             <router-link to="/rank"><h4 class="page-title">Ranking </h4></router-link>
                         </li>
                         <li class="hide-phone">
                             <form class="app-search">

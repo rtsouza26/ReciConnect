@@ -9,6 +9,10 @@ import Cod404 from "./views/404.vue"
 import Titulos from "./components/Titulos.vue"
 import RegisterIns from "./views/RegisterIns.vue"
 import MapaB from "./views/MapaB.vue"
+import Logado from "./views/Logado.vue"
+import Chat from "./views/Chat.vue"
+import Rank from "./views/Rank.vue"
+
 
 
 
@@ -24,7 +28,7 @@ export default new Router({
               name:"home",
               component: Home,
               props:{
-                login:true,
+                login:false,
                 mapa:"Mapa",
                 Sobre:"Sobre"
               },
@@ -34,10 +38,6 @@ export default new Router({
                     props:{
                       titulo:"Cadastro de Usuário"
                     }
-
-                },{
-                  path:"/mapaB",
-                  component:MapaB
                 },{
                   path:"/cadastroins",
                   component:RegisterIns,
@@ -49,22 +49,31 @@ export default new Router({
                   name:"AuthLogin",
                   component:Login
                 },{
+                  path:"chat",
+                  component:Chat
+                },{
+                  path:"rank",
+                  component:Rank
+                },{
                   path:"/",
                   components:{
                     default:Mapa,
                     about:About,
                     titulo:Titulos},
-                },{
-                  path:"/logado",
-                  components:{
-                    default:Mapa,
-                    about:About,
-                    titulo:Titulos
-                  }
+                
                 }]
               },{
                 path:"*",
                 component:Cod404
+              },{ 
+                path:"/logado",
+                component:Logado,
+                props:{
+                  logado:true,
+                }    
+              },{
+                path:"/mapab",
+                component:MapaB
               }
-          ]
+            ]
 });

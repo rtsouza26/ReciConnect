@@ -1,11 +1,13 @@
 <template>
 <div class ="row">
-    <div class="col-sm-12">
+    <div class="col-12">
         <div class="card-box">
             <div clas="row">
-                <div class = "col-12">
+                <div class="dropdown pull-right">
+                    <router-link to="/cadastroins"><button class="btn btn-primary waves-effect waves-light">Cadastro de Instituição</button></router-link>
+                </div>
                     <h1 class="display-4">{{ titulo }}</h1> 
-                    <form  data-parsley-validate novalidate >
+                    <form  data-parsley-validate novalidate  @submit.prevent="salvar">
                         <div class="form-group">
                             <label for="userName">Nome*</label>
                             <input  type="text" name="nome" v-model= "usuario.nome"  parsley-trigger="change" required
@@ -63,7 +65,7 @@
                             </button>
                         </div>
                     </form>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -72,6 +74,7 @@
 </template>
 
 <script>
+import Usuario from "../services/Register"
 export default {
     name: "Register",
     props:{
@@ -82,15 +85,38 @@ export default {
             usuario:{
                 nome:null,
                 email:null,
-                pasword:null,
+                password:null,
                 avatar:0
             }
         }
     
+    },computed:{
+
     },
     methods:{
-        salva:function(){
-
+        salvar:function(){
+            if(this.usuario.nome!=null){
+                if(this.usuario.email!=null){
+                    if(this.usuario.password!=null){
+                        if(this.usuario.avatar!=0.){
+                            Usuario.salvar(this.usuario).then(resposta =>{
+                                
+                                alert("Salvo com sucesso")
+                            })
+                            this.usuario.nome=null;
+                            this.usuario.email=null;
+                            this.usuario.password=null;
+                            this.usuario.avatar=0;
+                        }
+                    }else{
+                         alert("Valor inválido para senha")
+                    }
+                }else{
+                alert("Valor inválido para o email")
+                }
+            }else{
+                alert("Valor inválido para nome do usuário")
+            }
         }
     }
 
