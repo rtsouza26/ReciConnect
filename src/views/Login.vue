@@ -74,6 +74,8 @@ export default {
                 remenbeme:false
                 }
         }
+    }, mounted(){
+        
     },
     methods:{
         submit(){

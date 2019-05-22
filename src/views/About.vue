@@ -3,6 +3,7 @@
             <div class="col-xl-4">
                 <div class="card-box">
                     <div class="widget-chart text-center">
+                        <h4 class="header-title mt-0">Categorias</h4>
                         <div id="morris-donut-example" style="height: 245px;" class="morris-chart"></div>
                         <ul class="list-inline chart-detail-list mb-0">
                             <li class="list-inline-item">
@@ -17,13 +18,13 @@
             </div>
              <div class="col-xl-4">
                 <div class="card-box">
-                    <h4 class="header-title mt-0">Statistics</h4>
+                    <h4 class="header-title mt-0">Teste Estatiticas</h4>
                     <div id="morris-bar-example" style="height: 280px;" class="morris-chart"></div>
                 </div>
              </div>
             <div class="col-xl-4">
                 <div class="card-box">
-                <h4 class="header-title mt-0">Total Revenue</h4>
+                <h4 class="header-title mt-0">Mini Ranking</h4>
                     <div id="morris-line-example" style="height: 280px;" class="morris-chart"></div>
                     </div>
             </div>
