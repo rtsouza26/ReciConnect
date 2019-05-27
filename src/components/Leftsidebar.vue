@@ -21,7 +21,7 @@
                 <li class="has_sub">
                     <router-link to="/cadastro" class="waves-effect"><i class="mdi mdi-recycle mdi-24px"></i><span>Cadastro</span> </router-link></li>
                 <li class="has_sub">
-                    <router-link to="/tips" class="waves-effect"><i class ="mdi mdi-creation mdi-24px"></i><span> Dicas </span> </router-link></li>
+                    <router-link to="/cadastroins" class="waves-effect"><i class ="mdi mdi-creation mdi-24px"></i><span> Dicas </span> </router-link></li>
                 <li class="has_sub">
                     <router-link to="/chat" class="waves-effect"><i class ="mdi mdi-wechat mdi-24px"></i><span> Chat </span> </router-link></li>
                 <li class="has_sub">

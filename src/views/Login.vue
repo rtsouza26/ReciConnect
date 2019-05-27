@@ -61,6 +61,7 @@
 </template>
 
 <script>
+import { request } from 'http';
 
 
 export default {
@@ -68,7 +69,7 @@ export default {
     data(){
         return{
             auth:{
-                login: null,
+                email: null,
                 senha: null,
                 logado:String,
                 remenbeme:false
@@ -80,7 +81,6 @@ export default {
     methods:{
         submit(){
             
-            this.$router.push("/logado");
         }
     }
 }
