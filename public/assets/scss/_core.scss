@@ -24,7 +24,8 @@ File: Core
 ============= */
 
 body {
-  background: $light5;
+ // background: $light5;
+  background-image: url("../image/back.jpg");
   font-family: $font-primary;
   margin: 0;
   padding-bottom: 60px;
@@ -34,7 +35,8 @@ body {
 html {
     position: relative;
     min-height: 100%;
-    background: $light5;
+  //  background: $light5;
+    background-image: url("../image/back.jpg");
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;

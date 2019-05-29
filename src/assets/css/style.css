@@ -30,6 +30,7 @@ File: Core
 ============= */
 body {
   background: #ebeff2;
+  
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding-bottom: 60px;
@@ -4447,7 +4448,7 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
 }
 
 .wrapper-page .logo {
-  font-size: 42px;
+  font-size: 45px;
 }
 
 .panel-pages {
@@ -5513,7 +5514,7 @@ File: Menu
 
 .logo {
   color: #188ae2 !important;
-  font-size: 32px;
+  font-size: 55px;
   font-family: 'Rancho', cursive;
 }
 
@@ -5527,7 +5528,7 @@ File: Menu
 
 .user-box {
   text-align: center;
-  padding: 30px 0px 20px 0px;
+  padding: 20px 5px 20px 5px;
 }
 
 .user-box .user-img {

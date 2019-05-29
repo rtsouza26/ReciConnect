@@ -1,10 +1,11 @@
 import {http} from "./config"
 
 export default{
-    getUsuario:()=>{
-        return http.get('usuario')
+    getUsuario:(email)=>{
+        return http.get('usuario/'+ email)
     },
     salvar:(usuario)=>{
         return http.post("usuario", usuario)
-    }
+    },
+    
 }

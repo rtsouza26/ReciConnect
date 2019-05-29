@@ -68,9 +68,7 @@ export default new Router({
               },{ 
                 path:"/logado",
                 component:Logado,
-                props:{
-                  logado:true,
-                }    
+                   
               },{
                 path:"/mapab",
                 component:MapaB

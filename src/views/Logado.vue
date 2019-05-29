@@ -1,14 +1,14 @@
 <template>
 <div>
     <TopBar></TopBar>
-    <Leftsidebar :login={logado}></Leftsidebar>
+    <Leftsidebar usuario= this.usuario></Leftsidebar>
     <div class="content-page">
       <div class="content">
         <div class="container-fluid">
-            <router-view name = "titulo" :titulo="mapa" ></router-view>
-            <router-view name = "mapa"></router-view>
-            <router-view name = "titulo" :titulo="Sobre" ></router-view>
-            <router-view name="about"></router-view>
+            
+            
+            
+            
 
             <Footer></Footer>
         </div>
@@ -30,14 +30,20 @@ export default {
         Footer
     },
     props:{
-        logado:Boolean,
-        mapa:String,
-        Sobre:String,
+        
+        usuario:{
+          email:null,
+          nome:null,
+          senha:null,
+          avatar:null,
+          pontos:null
+        }
     },
+    data:()=>({
+      
+    }),
   methods:{
-    getLeftBar(login){
-        this.login = login;
-    }
+    
   }
 }
 </script>

@@ -14,7 +14,7 @@
 
                         <div class="form-group">
                             <div class="col-xs-12">
-                                <input class="form-control" type="text" required="" v-model="auth.login" placeholder="Email">
+                                <input class="form-control" type="text" required="" v-model="auth.email" placeholder="Email">
                             </div>
                         </div>
 
@@ -35,7 +35,7 @@
 
                         <div class="form-group text-center m-t-30">
                             <div class="col-xs-12">
-                                <button class="btn btn-custom btn-bordred btn-block waves-effect waves-light" type="submit" @click="this.submit">Log In</button>
+                                <button class="btn btn-custom btn-bordred btn-block waves-effect waves-light" type="submit" @click="submit">Log In</button>
                             </div>
                         </div>
 
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import { request } from 'http';
+import Usuario from "../services/Register"
 
 
 export default {
@@ -71,17 +71,29 @@ export default {
             auth:{
                 email: null,
                 senha: null,
-                logado:String,
-                remenbeme:false
-                }
+                },
+            usuario:{
+                email:null,
+                nome:null,
+                senha:null,
+                avatar:null,
+                pontos:null
+            
+            }
         }
-    }, mounted(){
-        
     },
     methods:{
+        
         submit(){
-            
-        }
+            Usuario.getUsuario(this.auth.email).then(result =>{
+                    this.usuario = result;
+                    this.$emit('emit-click', this.usuario.data);
+                    this.$router.push("/")
+                    
+            })
+        },
+        
+        
     }
 }
 </script>

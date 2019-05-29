@@ -3,11 +3,31 @@
 <div class = "left side-menu">
     <div  class = "sidebar-inner slimscrollleft" >
     
-        <div v-show= "this.login" class = "user-box" >
-            <div class = "user-img">
-                <img src="/assets/image/man.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
-            </div>
-            <h5><a href="#">Teste de Usuários</a> </h5>
+        <div v-if = "login" class = "user-box" >
+            
+                <div class = "user-img">
+                <img src="../assets/images/man.png" alt="user-img" title="Man" class="rounded-circle img-thumbnail img-responsive">
+                </div>
+                <h5>{{ usuario.nome }}</h5>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-primary progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" v-bind:style="'width:'+ usuario.pontos +'%'">
+                        
+                    </div>
+                </div>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <router-link to="/cadastro" >
+                            <i class="mdi mdi-settings mdi-24px"></i>
+                        </router-link>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <router-link to="/"  class="text-custom">
+                            <i class="mdi mdi-power mdi-24px"></i>
+                        </router-link>
+                    </li>
+                </ul>
+                
                 
         </div>
     
@@ -39,12 +59,23 @@
 export default {
     name: "Leftsidebar",
     props:{
-        
             login:null,
+            usuario:{
+                email:null,
+                nome:null,
+                senha:null,
+                avatar:0,
+                pontos:null,
+            }
             
         
     }
 
 }
 </script>
+<style>
+.checked {
+  color: orange;
+}
+</style>
 

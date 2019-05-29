@@ -1,12 +1,12 @@
 <template>
   <div>
     <TopBar></TopBar>
-    <Leftsidebar :logado={login}></Leftsidebar>
+    <Leftsidebar :login = "this.logado" :usuario="this.usuario"></Leftsidebar>
     <div class="content-page">
       <div class="content">
         <div class="container-fluid">
           <router-view name = "titulo" :titulo="mapa" ></router-view>
-          <router-view @emit-click="getLeftBar"></router-view>
+          <router-view @emit-click="getLogin"></router-view>
           <router-view name = "titulo" :titulo="Sobre" ></router-view>
           <router-view name="about"></router-view>
           <Footer></Footer>
@@ -39,9 +39,23 @@ export default {
     Sobre:String,
     Register:String
   },
+  data(){
+    return{
+      logado:false,
+      usuario:{
+                email:null,
+                nome:null,
+                senha:null,
+                avatar:null,
+                pontos:null
+            
+            }
+    }
+  },
   methods:{
-    getLeftBar(login){
-        this.login = login;
+    getLogin(usuario){
+      this.usuario = usuario;
+      this.logado = true;
     }
   }
 }

@@ -58,37 +58,37 @@
                                         </div>
                                         <label class="form-check-label p-2">
                                             <input class="form-check-input p-2" type="radio" v-validate= "'required|included:1,2,3,4,5,6,7'" v-model = "usuario.avatar" name="radio_box" id="radio_box" value="1">
-                                            <img src="/assets/image/avatares/man.png" alt="user-img" title="Man1" class="rounded-circle img-thumbnail img-responsive">
+                                            <img src="../assets/images/avatares/man.png" alt="user-img" title="Man1" class="rounded-circle img-thumbnail img-responsive">
                                         </label>
                                         
                                         <label class="form-check-label p-2">
                                              <input class="form-check-input p-2" type="radio" v-model = "usuario.avatar" name="radio_box" id="radio_box" value="2">
-                                            <img src="/assets/image/avatares/man2.png" alt="user-img" title="Man2" class="rounded-circle img-thumbnail img-responsive">
+                                            <img src="../assets/images/avatares/man2.png" alt="user-img" title="Man2" class="rounded-circle img-thumbnail img-responsive">
                                         </label>
                                         
                                         <label class="form-check-label p-2">
                                             <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="radio_box" id="radio_box" value="3">
-                                            <img src="/assets/image/avatares/man3.png" alt="user-img" title="Man3" class="rounded-circle img-thumbnail img-responsive">
+                                            <img src="../assets/images/avatares/man3.png" alt="user-img" title="Man3" class="rounded-circle img-thumbnail img-responsive">
                                         </label>
                                         
                                         <label class="form-check-label p-2">
                                             <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="radio_box" id="radio_box" value="4">
-                                            <img src="/assets/image/avatares/woman5.png" alt="user-img" title="woman" class="rounded-circle img-thumbnail img-responsive">
+                                            <img src="../assets/images/avatares/woman5.png" alt="user-img" title="woman" class="rounded-circle img-thumbnail img-responsive">
                                         </label>
                                         
                                         <label class="form-check-label p-2">
                                             <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="radio_box" id="radio_box" value="5">
-                                            <img src="/assets/image/avatares/woman2.png" alt="user-img" title="woman" class="rounded-circle img-thumbnail img-responsive">
+                                            <img src="../assets/images/avatares/woman2.png" alt="user-img" title="woman" class="rounded-circle img-thumbnail img-responsive">
                                         </label>
                                         
                                         <label class="form-check-label p-2">
                                             <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="radio_box" id="radio_box" value="6">
-                                            <img src="/assets/image/avatares/woman3.png" alt="user-img" title="woman" class="rounded-circle img-thumbnail img-responsive">
+                                            <img src="../assets/images/avatares/woman3.png" alt="user-img" title="woman" class="rounded-circle img-thumbnail img-responsive">
                                         </label>
                                         
                                         <label class="form-check-label p-2">
                                             <input class="form-check-input" type="radio" v-model = "usuario.avatar" name="radio_box" id="radio_box" value="7">
-                                            <img src="/assets/image/avatares/woman4.png" alt="user-img" title="woman" class="rounded-circle img-thumbnail img-responsive">
+                                            <img src="../assets/images/avatares/woman4.png" alt="user-img" title="woman" class="rounded-circle img-thumbnail img-responsive">
                                         </label>
                                     </div>
                                 </div>
@@ -130,6 +130,7 @@ export default {
                 nome:null,
                 senha:null,
                 avatar:0,
+                pontos:0
             
             }
             
